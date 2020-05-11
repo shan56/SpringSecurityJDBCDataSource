@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 public class HomeController {
 
     @RequestMapping("/")
-    public String index(HttpServletRequest request, Model model) {
-        Authentication auth = SecurityContextHolder.getContext()
-                .getAuthentication();
-        model.addAttribute("user", auth.getName());
+    public String index() {
         return "index";
     }
 

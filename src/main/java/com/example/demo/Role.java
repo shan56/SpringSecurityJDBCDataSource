@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name="roles")
@@ -18,10 +15,6 @@ public class Role {
 
     @Column(name = "role")
     private String role;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private User user;
 
     public Role() {
     }
@@ -54,14 +47,5 @@ public class Role {
     public void setRole(String role) {
         this.role = role;
     }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
 
 }
