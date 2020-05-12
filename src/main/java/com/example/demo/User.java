@@ -2,7 +2,6 @@ package com.example.demo;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name="users_db")
@@ -11,7 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column (name = "username", nullable = false)
+    @Column (name = "username")
     private String username;
 
     @Column (name = "email")
