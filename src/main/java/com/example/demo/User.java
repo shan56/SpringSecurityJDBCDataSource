@@ -4,7 +4,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users_db")
+@Table(name="user_tbl")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
